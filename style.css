@@ -1,0 +1,73 @@
+@layer globals, components, utilities;
+
+@layer globals {
+  /* inter-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/Fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../assets/Fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../assets/Fonts/inter-v20-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* Fonts */
+  :root {
+  }
+
+  /* Colors */
+  :root {
+    --c-white: hsl(0, 0%, 100%);
+    --c-green: hsl(122, 39%, 49%);
+    --c-blusish-cyan: hsl(200, 19%, 18%);
+    --c-dark-gray: hsl(231, 13%, 11%);
+    --c-neutral-silver: hsl(216, 33%, 97%);
+    --c-gravel: hsl(0, 0%, 30%);
+    --c-neutral-gray: hsl(0, 0%, 44%);
+    --c-neutral-silver: hsl(216, 33%, 97%);
+    --c-light-gray: hsl(225, 12%, 87%);
+
+    --color-main-bg: var(--c-white);
+    --color-text-dark: var(--c-dark-gray);
+    --color-text-dark-gray: var(--c-gravel);
+    --color-text-neutral-gray: var(--c-neutral-gray);
+    --color-text-light-gray: var(--c-light-gray);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: var(--color-text-dark-gray);
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
