@@ -9,6 +9,25 @@
     font-weight: 400;
     src: url("../assets/Fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  /* inter-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../assets/Fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* inter-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../assets/Fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
   /* inter-700 - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -31,13 +50,14 @@
     --fs-14: calc(14 / 16 * 1rem);
     --fs-16: calc(16 / 16 * 1rem);
     --fs-28: calc(28 / 16 * 1rem);
+    --fs-36: calc(36 / 16 * 1rem);
     --fs-48: calc(48 / 16 * 1rem);
     --fs-64: calc(64 / 16 * 1rem);
 
     --font-size-topnav-links: var(--fs-14);
     --font-size-topnav-button: var(--fs-14);
     --font-size-h1: var(--fs-64);
-    --font-size-h2: var(--fs-48);
+    --font-size-h2: var(--fs-36);
     --font-size-h3: var(--fs-28);
 
     @media (width >= calc(800 / 16 * 1rem)) {
@@ -71,6 +91,7 @@
     --color-button-bg: var(--c-green);
     --color-button-text: var(--c-white);
     --color-item-shadow: var(--c-light-blue-20);
+    --color-feature-2-bg: var(--c-neutral-silver);
   }
 
   *,
@@ -103,6 +124,12 @@
 
   h2 {
     font-size: var(--font-size-h2);
+    font-weight: 600;
+
+    &.large {
+      font-size: var(--fs-48);
+      font-weight: 700;
+    }
   }
 
   h3 {
@@ -140,6 +167,10 @@
     list-style-type: none;
     padding: 0;
   }
+
+  .text__highlight {
+    color: var(--color-title-highlight);
+  }
 }
 
 @layer components {
@@ -148,8 +179,12 @@
     background-color: var(--color-button-bg);
     color: var(--color-button-text);
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 4px;
     border: none;
+
+    &.sign__up {
+      border-radius: 6px;
+    }
   }
 
   .topnav {
@@ -219,10 +254,6 @@
 
     .hero__title {
       margin-block-end: 16px;
-    }
-
-    .hero__title-highlight {
-      color: var(--color-title-highlight);
     }
 
     .hero__content {
@@ -302,11 +333,14 @@
     }
   }
 
-  .feature-1 {
-    .feature-1__wrapper {
+  .feature-1,
+  .feature-3 {
+    .feature-1__wrapper,
+    .feature-3__wrapper {
       display: grid;
       grid-template-columns: 3fr 5fr;
       align-items: center;
+      gap: 96px;
       padding-block: 52px;
     }
 
@@ -316,13 +350,60 @@
     .feature-1__text {
     }
 
-    .feature-1__title {
+    .feature-1__title,
+    .feature-3__title {
       margin-block-end: 16px;
+      max-width: 25ch;
     }
 
-    .feature-1__description {
+    .feature-1__description,
+    .feature-3__description {
       margin-block-end: 32px;
-      max-width: 80ch;
+      max-width: 68ch;
+    }
+  }
+
+  .feature-2 {
+    background-color: var(--color-feature-2-bg);
+    margin-block: 48px;
+
+    .feature-2__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-block: 64px;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .feature-2__text-left {
+    }
+
+    .feature-2__text-left__title {
+      font-weight: 600;
+      max-width: 17ch;
+    }
+
+    .feature-2__text-left__description {
+    }
+
+    .feature-2__text-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 40px;
+    }
+
+    .feature-2__text-right__item {
+      display: flex;
+      gap: 16px;
+    }
+
+    .feature-2__text-right__icon {
+    }
+
+    .feature-2__text-right__amount {
+    }
+
+    .feature-2__text-right__description {
     }
   }
 }
