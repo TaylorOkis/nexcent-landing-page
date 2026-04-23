@@ -262,6 +262,7 @@
     .offers__wrapper {
       display: grid;
       justify-items: center;
+      margin-block-end: 42px;
     }
 
     .offers__title {
@@ -298,6 +299,30 @@
     }
 
     .offers__item-content {
+    }
+  }
+
+  .feature-1 {
+    .feature-1__wrapper {
+      display: grid;
+      grid-template-columns: 3fr 5fr;
+      align-items: center;
+      padding-block: 52px;
+    }
+
+    .feature-1__image {
+    }
+
+    .feature-1__text {
+    }
+
+    .feature-1__title {
+      margin-block-end: 16px;
+    }
+
+    .feature-1__description {
+      margin-block-end: 32px;
+      max-width: 80ch;
     }
   }
 }
