@@ -60,6 +60,7 @@
     --font-size-h1: var(--fs-64);
     --font-size-h2: var(--fs-36);
     --font-size-h3: var(--fs-28);
+    --font-size-h4: var(--fs-20);
 
     @media (width >= calc(800 / 16 * 1rem)) {
       --font-size-topnav-links: var(--fs-16);
@@ -77,6 +78,7 @@
     --c-neutral-gray: hsl(0, 0%, 44%);
     --c-light-gray: hsl(225, 12%, 87%);
     --c-light-blue-20: hsl(210, 29%, 75%, 20%);
+    --c-light-blue-40: hsl(210, 29%, 75%, 40%);
     --c-purple: hsl(259, 81%, 47%);
 
     --color-main-bg: var(--c-white);
@@ -96,6 +98,7 @@
     --color-feature-2-bg: var(--c-neutral-silver);
     --color-testimonial-bg: var(--c-neutral-silver);
     --color-testimonial-logo: var(--c-purple);
+    --color-blog-item-shadow: var(--c-light-blue-40);
   }
 
   *,
@@ -138,6 +141,11 @@
 
   h3 {
     font-size: var(--font-size-h3);
+  }
+
+  h4 {
+    font-size: var(--font-size-h4);
+    font-weight: 600;
   }
 
   p {
@@ -193,6 +201,11 @@
     &.sign__up {
       border-radius: 6px;
     }
+  }
+
+  .vector__arrow {
+    display: inline-block;
+    margin-left: 8px;
   }
 
   .topnav {
@@ -305,7 +318,7 @@
     }
 
     .offers__title {
-      max-width: 23ch;
+      max-width: 60ch;
       margin-block-end: 8px;
     }
 
@@ -428,6 +441,7 @@
       gap: 78px;
       padding-block: 32px;
       align-items: center;
+      margin-block-end: 48px;
     }
     .testimonial__image {
       width: calc(326 / 16 * 1rem);
@@ -472,10 +486,55 @@
       font-size: var(--fs-20);
       font-weight: 600;
     }
+  }
 
-    .testimonial__link-arrow {
-      display: inline-block;
-      margin-left: 8px;
+  .blog {
+    text-align: center;
+
+    .blog__wrapper {
+      display: grid;
+      justify-items: center;
+    }
+    .blog__title {
+      margin-block-end: 8px;
+    }
+    .blog__description {
+      max-width: 63ch;
+      margin-block-end: 16px;
+    }
+    .blog__grid {
+      display: flex;
+      gap: 24px;
+    }
+    .blog__item {
+      position: relative;
+    }
+    .blog__item-image {
+      z-index: -1;
+      width: calc(368 / 16 * 1rem);
+      height: calc(286 / 16 * 1rem);
+    }
+    .blog__text {
+      position: absolute;
+      inset-block-start: 190px;
+      inset-inline-start: 25.5px;
+      background-color: var(--c-neutral-silver);
+      width: calc(317 / 16 * 1rem);
+      height: calc(176 / 16 * 1rem);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px var(--color-blog-item-shadow);
+    }
+
+    .blog__post-title {
+      margin-block-end: 16px;
+      font-size: 20;
+    }
+
+    .blog__post-link {
+      font-size: var(--fs-20);
+      font-weight: 600;
+      padding-block: 8px;
     }
   }
 }
