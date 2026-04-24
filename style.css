@@ -80,6 +80,7 @@
     --c-light-blue-20: hsl(210, 29%, 75%, 20%);
     --c-light-blue-40: hsl(210, 29%, 75%, 40%);
     --c-purple: hsl(259, 81%, 47%);
+    --c-neutral-black: hsl(200, 19%, 18%);
 
     --color-main-bg: var(--c-white);
     --color-text-dark: var(--c-dark-gray);
@@ -99,6 +100,7 @@
     --color-testimonial-bg: var(--c-neutral-silver);
     --color-testimonial-logo: var(--c-purple);
     --color-blog-item-shadow: var(--c-light-blue-40);
+    --color-cta-text: var(--c-neutral-black);
   }
 
   *,
@@ -490,6 +492,7 @@
 
   .blog {
     text-align: center;
+    margin-block-end: 174px;
 
     .blog__wrapper {
       display: grid;
@@ -535,6 +538,25 @@
       font-size: var(--fs-20);
       font-weight: 600;
       padding-block: 8px;
+    }
+  }
+
+  .cta {
+    background-color: var(--c-neutral-silver);
+    text-align: center;
+
+    .cta__wrapper {
+      display: grid;
+      justify-items: center;
+      padding-block: 32px;
+    }
+
+    .cta__title {
+      font-size: var(--fs-64);
+      font-weight: 600;
+      color: var(--color-cta-text);
+      max-width: 20ch;
+      margin-block-end: 32px;
     }
   }
 }
