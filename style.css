@@ -183,6 +183,11 @@
 
   a {
     text-decoration: none;
+
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
   }
 
   img,
@@ -625,8 +630,6 @@
       margin-block-end: 8px;
     }
 
-    .footer__text {
-    }
     .footer__social {
       display: flex;
       gap: 16px;
@@ -639,9 +642,6 @@
     .footer__links {
       display: grid;
       gap: 12px;
-    }
-
-    .footer__link {
     }
 
     .form {
