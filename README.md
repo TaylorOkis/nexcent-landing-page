@@ -17,13 +17,13 @@
 
 ## 🎨 Design Preview
 
-![Preview]()
+![Preview](https://github.com/TaylorOkis/nexcent-landing-page/blob/main/assets/Images/Landing_page.png)
 
 ---
 
 ## 📚 More Info
 
-> This project is simply for **learning and practice**. My goal was to replicate the design as close as possible, so I did not prioritize responsiveness, animations, or additional styling effects.
+> This project is simply for **learning and practice**. My goal was to replicate the design as accurately as possible, so I did not prioritize responsiveness, animations, or additional styling effects.
 > The design used does **not belong to me** but to [Muntasir Billah](https://www.figma.com/@itsmuntasirb).  
 > Please check out their designs – they're really worth a look! 🙌
 
